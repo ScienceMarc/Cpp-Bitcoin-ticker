@@ -8,7 +8,7 @@ using namespace std;
 int main() {
 	while (true) {
 		system("start powershell.exe -windowstyle hidden wget https://api.coinmarketcap.com/v1/ticker/?limit=1 -OutFile out.txt"); //Uses powershell to download a pricesheet from Coinmarketcap
-		system("timeout /t 4 >nul"); //Waits 4 seconds for the file to download
+		system("timeout /t 5 >nul"); //Waits 5 seconds for the file to download
 		ifstream file; //Sets up ifstream variable
 		file.open("out.txt"); //Opens file.
 		string content((istreambuf_iterator<char>(file)), (istreambuf_iterator<char>())); //Puts the contents of the file into a string. This is magic I coppied from the internet.
